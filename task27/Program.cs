@@ -1,11 +1,12 @@
-﻿void f (int x);
+﻿int f (int x)
 {
-    int i = 0;
+    int sum = 0;
     while (x > 0) 
     {
-        i = i + x % 10;
+        sum = sum + x % 10;
         x = x / 10;
     }
+    return sum;
 }
 Console.Write("Insert the number: ");
 int n = Convert.ToInt32(Console.ReadLine());
