@@ -1,14 +1,11 @@
-﻿int n = Convert.ToInt32(Console.ReadLine());
-int [] array = new int[n];
-void fill(int[] collection);
+﻿int[] fillArray(int Length, int min, int max)
 {
-    int length = collection.length;
-    int index = 0;
-    while (index < length)
+    int [] array = new int[Length];
+    for(int i = 0; i < Length; i++)
     {
-        array[index] = new Random().Next(1, 101);
-        index++;
+        array[i] = new Random().Next(min, max + 1);
     }
+    return array;
 }
-
-// Не понимаю почему, то что делали на лекциях не работает... Вроде как пишу то же,что и было показано.
+int[] array = fillArray(7, 0, 30);
+Console.Write(String.Join(", ", array));
